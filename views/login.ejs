@@ -1,0 +1,24 @@
+<%- include("header") -%>
+    <form method="post" action="./login">
+      <label htmlfor="email">Enter your email: </label>
+      <input 
+        type="email"
+        name="email"
+        id="email"
+        required
+        autocomplete="off"
+      />
+      <br />
+      <label htmlfor="password">Enter your password: </label>
+      <input 
+        type="password"
+        name="password"
+        id="password"
+        required
+        autocomplete="off"
+      />
+      <br />
+      <button type="submit">Login</button>
+      <button><a href="/">Back</a></button>
+    </form>
+<%- include("footer") -%>

@@ -1,0 +1,20 @@
+<%- include("header"); -%>
+  <h2>Welcome <%= name %> to Chores</h2>
+  <div>
+    <ol>
+      <% if(userChores.length > 0){ %>
+          <% userChores.forEach((chore) => { %>
+            <% const {chores} = chore; %>
+              <li><%= chores %></li>
+     <% }) %>
+      <% } %>
+    </ol>
+  </div>
+  <button><a href="/all-chores">All Chores</a></button>
+  <br />
+  <button><a href="/">Home</a></button>
+  <br />
+  <button><a href="/add-chores">Add Chores</a></button>
+  <br />
+  <button><a href="/logout">Logout</a></button>
+<%- include("footer"); -%>

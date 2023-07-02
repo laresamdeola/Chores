@@ -1,0 +1,33 @@
+<%- include("header") -%>
+    <form method="post" action="./register">
+      <label htmlfor="name">Enter your name: </label>
+      <input 
+        type="name"
+        name="name"
+        id="name"
+        required
+        autocomplete="off"
+      />
+      <br />
+      <label htmlfor="email">Enter your email: </label>
+      <input 
+        type="email"
+        name="email"
+        id="email"
+        required
+        autocomplete="off"
+      />
+      <br />
+      <label htmlfor="password">Enter your password: </label>
+      <input 
+        type="password"
+        name="password"
+        id="password"
+        required
+        autocomplete="off"
+      />
+      <br />
+      <button type="submit">Register</button>
+       <button><a href="/">Home</a></button>
+    </form>
+<%- include("footer") -%>
