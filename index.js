@@ -134,12 +134,12 @@ app.post("/add-chores", (req, res) => {
   }*/
 
   //addChores2();
-  const saveNewChores = async() => {
-    if(queryEmail === currentUser.email){
-    await currentUser.chores.push(req.body.chores);
-    await currentUser.save();
-    console.log("Chores has been added to array");
-    res.render("chores", {userChores: [], name: ""});
+  const saveNewChores = async () => {
+    if (queryEmail === currentUser.email) {
+      await currentUser.chores.push(req.body.chores);
+      await currentUser.save();
+      console.log("Chores has been added to array");
+      res.render("chores", { userChores: [], name: "" });
     }
   }
   saveNewChores();
@@ -171,3 +171,5 @@ app.get("/logout", (req, res) => {
 // 1. Meant to create different collections - one for users and the other for chores
 // 2. Find a way to link together the two collections.
 // The answer to the above is Sub-Documents.
+// 3. Need to create the update route
+// 4. Need to create the delete one route.
